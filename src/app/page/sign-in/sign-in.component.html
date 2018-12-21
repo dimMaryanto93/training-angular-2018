@@ -1,14 +1,18 @@
-<form [formGroup]="formGroup" (submit)="submitEvent($event)">
-  <div>
-    <label for="username">Username</label>
-    <input type="text" name="username" id="username" formControlName="username">
-  </div>
-  <div>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" formControlName="password">
-  </div>
-  <div>
-    <button type="submit">Kirim</button>
-    <button type="reset">Reset</button>
-  </div>
-</form>
+<div class="container">
+  <form [formGroup]="formGroup" (submit)="submitEvent($event)">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input class="form-control" type="text" name="username" id="username" formControlName="username">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input class="form-control" type="password" name="password" id="password" formControlName="password">
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit">Kirim</button>
+      &nbsp;
+      <button class="btn btn-secondary" type="reset">Reset</button>
+    </div>
+  </form>
+
+</div>

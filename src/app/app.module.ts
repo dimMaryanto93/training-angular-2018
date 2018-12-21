@@ -9,6 +9,7 @@ import {PageNotFoundComponent} from './page/page-not-found/page-not-found.compon
 import {SignInComponent} from './page/sign-in/sign-in.component';
 import {HomeComponent} from './page/home/home.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import {AuthModule} from './auth/auth.module';
 
 const appRoutes: Routes = [
   {
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
     CommonModule,
     RouterModule.forRoot(appRoutes, {enableTracing: true}),
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
