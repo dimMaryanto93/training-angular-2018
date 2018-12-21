@@ -4,7 +4,6 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
-import {HttpClientModule} from '@angular/common/http';
 import {PageNotFoundComponent} from './page/page-not-found/page-not-found.component';
 import {SignInComponent} from './page/sign-in/sign-in.component';
 import {HomeComponent} from './page/home/home.component';
@@ -44,8 +43,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     CommonModule,
-    RouterModule.forRoot(appRoutes, {enableTracing: true}),
-    HttpClientModule,
+    RouterModule.forRoot(appRoutes,
+      {enableTracing: false}),
     ReactiveFormsModule,
     AuthModule
   ],
