@@ -9,6 +9,7 @@ import {SignInComponent} from './page/sign-in/sign-in.component';
 import {HomeComponent} from './page/home/home.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {AuthModule} from './auth/auth.module';
+import {AuthGuardService} from './auth/auth-guard.service';
 
 const appRoutes: Routes = [
   {
@@ -18,6 +19,7 @@ const appRoutes: Routes = [
   {
     path: 'home',
     component: AppComponent,
+    canActivate: [AuthGuardService],
     children: [
       {
         path: '',

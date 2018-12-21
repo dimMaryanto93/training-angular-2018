@@ -30,7 +30,8 @@ export class SignInComponent implements OnInit {
     const username = this.formGroup.value.username;
     const password = this.formGroup.value.password;
     this._authService.authentication(username, password).subscribe(data => {
-      console.log(data);
+      // console.log(data);
+      this._authService.setAuthenticate(data);
       this._route.navigate(['/home']);
     }, error => {
       console.error(error.message);
